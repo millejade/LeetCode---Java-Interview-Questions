@@ -49,12 +49,17 @@ public class MedianOfTwoSortedArrays {
         int[] merged = new int[m+n];
     
         /* Merging the two arrays*/
+	System.arraycopy(nums1, 0, merged, 0, m);
+        System.arraycopy(nums2, 0, merged, m, n);
+	
+	/*	OTHER METHOD TO MERGED
         for(int i = 0; i<n+m; i++) {
         	
         	if(i >= m) merged[i] = nums2[i-m];
         	else merged[i] = nums1[i];
         	
         }
+	*/
         
         /* Sort the merged arrays */
         Arrays.sort(merged);
@@ -62,14 +67,13 @@ public class MedianOfTwoSortedArrays {
         double median = 0.0d;
         
         /* Find the median */
-        if((n+m)%2 != 0) median =  merged[(n+m)/2];
-        else {
+        if((n+m)%2 != 0) median =  merged[(n+m)/2]; //if the length is ODD number
+		
+        else { //if the length is EVEN number
         	median = merged[(m+n)/2] + merged[((m+n)/2)-1];
         	median = median/2;
         }
-		return median;
-        
-        
+		return median; 
         
     }
 
