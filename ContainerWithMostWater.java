@@ -57,17 +57,20 @@ public class ContainerWithMostWater {
       The new AREA will be use as second parameter which will be compared to the first parameter "maxArea" 
       "maxArea" is a previous maximum area.
       
-      Compare them which has the greater value using Math.max() method
+      Compare them which one has the greater value using Math.max() method
       
       The one with a greater value will be the new 'maxArea'
       */
-			maxArea = Math.max(maxArea, Math.min(height[lowerBound], height[upperBound])*(upperBound - lowerBound));
+			maxArea = Math.max(maxArea, Math.min(height[lowerBound], height[upperBound]) *(upperBound - lowerBound));
 			
       
       /*
       upperBound are meant to decrease while lowerBound are needed to increase
       */
-			if(height[upperBound]<height[lowerBound]) upperBound--;
+			//this IF STATEMENT will just adjust thelower and upper bound
+			//upper bound is shorter than lower bound, we'll adjust the upper bound
+			//else, adjust the lower bound
+			if(height[upperBound]<height[lowerBound]) upperBound--; 
 			else lowerBound++;
 			
 		}
