@@ -66,15 +66,16 @@ public class RemoveDuplicatesFromSortedArray {
         
         for(int i = 1; i < nums.length; i++){
         
-            if(nums[i] != nums[x]){
-              
+            if(nums[i] != nums[x]){ //if the value of this indexes are NOT the same...
+              x++; //since 'x' started with 0 while 'i' started with 1, increment this 'x' to UPDATE
+                //this incrementing will also serve on how many elements are distinct
               nums[x] = nums[i];
               
             }
         
         }
         
-        return count;
+        return x + 1; //since we increment first before assigning nums[x] to nums[i], the previous nums[0] is also a distinct element that's why we add 1
         
     }
     
