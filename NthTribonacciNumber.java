@@ -30,13 +30,24 @@ public class NthTribonacciNumber {
         int n = 25;
         System.out.println(tribonacci(n));
     }
+    /*
     
+    This was just same as Fibonacci...
+    
+    */
      public static int tribonacci(int n) {
         
         if (n <= 1) return n;
         int F0 = 0;
         int F1 = 1;
         int F2 = 1;
+      /*
+      
+      Why initialized i = 3?
+      - Because we've got the first 3 sequence, f(0), f(1) and f(2)
+      
+      We returned F2 or f(2) as it was assigned to 'temp', this means it is the last number in the sequence and that's all we need.
+      */
         for (int i = 3; i <= n; i++) {
             int temp = F0 + F1 + F2;
             F0 = F1;
