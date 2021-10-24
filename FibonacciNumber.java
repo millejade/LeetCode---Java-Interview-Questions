@@ -46,8 +46,14 @@ public class FibonacciNumber {
         int firstTerm = 0; // F(0)
         int secondTerm = 1; // F(1)
         
-        if(n == 0) return 0; //if n = 0
+        if(n == 0) return 0; //if n = 0, then F(0) = 0
         
+        /*
+        why i = 2? Because we've the first TWO terms, F(0) and F(1) that's why we start with 2.
+        term = the last value in a fibonacci sequence with a given 'n'
+        
+        the for loop is pretty good to understand by yourself
+        */
         for(int i = 2; i <= n; i++){
         
             term = firstTerm + secondTerm;
