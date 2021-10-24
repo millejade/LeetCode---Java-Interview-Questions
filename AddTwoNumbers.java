@@ -59,7 +59,7 @@ public class AddTwoNumbers {
 			}
 			
 			if(ll3.get(i) > 9) { //if the sum is more than one-digit, get only the right-side digit
-				carry = ll3.get(i)/10;
+				carry = ll3.get(i)/10; //get the carry by dividing it by 10
 			}
 			
 		}
