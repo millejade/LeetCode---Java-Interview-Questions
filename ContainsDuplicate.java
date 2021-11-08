@@ -32,7 +32,7 @@ public class ContainsDuplicate {
         
         Arrays.sort(nums); //srot tha array
      /*
-     it will just the two consecutive elements in array have the same value, since it is sorted...
+     it will just check the two consecutive elements in array if they have the same value, since it is sorted...
      if two consecutive elements have the same value, then the array contains duplicate
      */
         for(int i = 1; i < nums.length; i++){
